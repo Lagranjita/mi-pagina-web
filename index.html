@@ -1,61 +1,94 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negocio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="banner">
-            <h1>LA GRANJITA</h1>
-            <img src="NB.JPEG" alt="Banner de la Granjita" class="banner-img">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#galeria">Galería</a></li>
-            </ul>
-        </nav>
-    </header>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    <section id="productos">
-        <h2>Productos</h2>
-        <div class="productos-container">
-            <div class="producto">Huevos</div>
-            <div class="producto">Caja Especial</div>
-            <div class="producto">Producto 3</div>
-            <div class="producto">Producto 4</div>
-            <div class="producto">Producto 5</div>
-            <div class="producto">Producto 6</div>
-            <div class="producto">Producto 7</div>
-            <div class="producto">Producto 8</div>
-            <div class="producto">Producto 9</div>
-            <div class="producto">Producto 10</div>
-        </div>
-    </section>
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Teléfono: <span id="telefono">[Editar número]</span></p>
-        <p>Email: <span id="email">[Editar correo]</span></p>
-        <p>Redes Sociales: <span id="redes">[Editar enlaces]</span></p>
-    </section>
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
 
-    <section id="galeria">
-        <h2>Galería</h2>
-        <input type="file" id="subirImagen" accept="image/*">
-        <div class="galeria-container" id="galeria-container"></div>
-    </section>
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+}
 
-    <section id="reaccion">
-        <h2>¿Te gusta esta página?</h2>
-        <button id="like" aria-label="Me gusta">Me gusta</button>
-        <button id="dislike" aria-label="No me gusta">No me gusta</button>
-    </section>
+nav ul li {
+    margin: 0 15px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.producto {
+    background-color: #f0f0f0;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contacto p {
+    margin: 10px 0;
+}
+
+.galeria-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galeria-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Reactions Section */
+#reaccion button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+}
+
+#reaccion button:hover {
+    background-color: #218838;
+}

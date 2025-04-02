@@ -3,42 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botón de Productos</title>
-    <style>
-        .btn-productos {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: green;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            text-align: center;
-        }
-        .btn-productos::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -15px;
-            transform: translateY(-50%);
-            border-style: solid;
-            border-width: 10px 0 10px 15px;
-            border-color: transparent transparent transparent white;
-        }
-    </style>
+    <title>Negocio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="listado_productos.html" class="btn-productos">Productos</a>
-</body>
-</html>
+    <header>
+        <table width="100%" height="100%">
+    <tr>
+        <td align="center" valign="middle">
+            <h1>LA GRANJITA</h1>
+        </td>
+    </tr>
+</table>
+        <img src="NB.JPEG" alt="Banner" style="max-width: 100%; height: auto;">
+   <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
 
-
-He actualizado el código para que el botón tenga forma de flecha verde y dirija al listado de productos. Si necesitas más cambios, dime.
-
-<!DOCTYPE html>
-<html lang="es">
+                <!DOCTYPE html><html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,32 +28,67 @@ He actualizado el código para que el botón tenga forma de flecha verde y dirij
     <style>
         .btn-productos {
             display: inline-block;
-            padding: 15px 30px;
-            background-color: green;
+            padding: 15px;
+            background-color: blue;
             color: white;
             text-decoration: none;
             font-size: 16px;
             border: none;
             cursor: pointer;
-            position: relative;
+            width: 100px;
+            height: 100px;
             text-align: center;
-        }
-        .btn-productos::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -15px;
-            transform: translateY(-50%);
-            border-style: solid;
-            border-width: 10px 0 10px 15px;
-            border-color: transparent transparent transparent white;
+            line-height: 100px;
         }
     </style>
 </head>
 <body>
-    <a href="listado_productos.html" class="btn-productos">Productos</a>
+    <a href="productos.html" class="btn-productos">Productos</a>
+</body>
+                </html>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#galeria">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="productos-container">
+            <!-- Aquí puedes editar hasta 10 productos -->
+            <div class="producto">Huevos</div>
+            <div class="producto">caja especial</div>
+            <div class="producto">Producto 3</div>
+            <div class="producto">Producto 4</div>
+            <div class="producto">Producto 5</div>
+            <div class="producto">Producto 6</div>
+            <div class="producto">Producto 7</div>
+            <div class="producto">Producto 8</div>
+            <div class="producto">Producto 9</div>
+            <div class="producto">Producto 10</div>
+        </div>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Teléfono: <span id="telefono">[Editar número]</span></p>
+        <p>Email: <span id="email">[Editar correo]</span></p>
+        <p>Redes Sociales: <span id="redes">[Editar enlaces]</span></p>
+    </section>
+    
+    <section id="galeria">
+        <h2>Galería</h2>
+        <input type="file" id="subirImagen" accept="image/*">
+        <div class="galeria-container"></div>
+    </section>
+    
+    <section id="reaccion">
+        <h2>¿Te gusta esta página?</h2>
+        <button id="like">Me gusta</button>
+        <button id="dislike">No me gusta</button>
+    </section>
+    
+    <script src="script.js"></script>
 </body>
 </html>
-
-
 

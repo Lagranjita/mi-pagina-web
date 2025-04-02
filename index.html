@@ -8,15 +8,11 @@
 </head>
 <body>
     <header>
-        <table width="100%" height="100%">
-    <tr>
-        <td align="center" valign="middle">
+        <div class="banner">
             <h1>LA GRANJITA</h1>
-        </td>
-    </tr>
-</table>
-        <img src="NB.JPEG" alt="Banner" style="max-width: 100%; height: auto;">
-   <nav>
+            <img src="NB.JPEG" alt="Banner de la Granjita" class="banner-img">
+        </div>
+        <nav>
             <ul>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -24,13 +20,12 @@
             </ul>
         </nav>
     </header>
-    
+
     <section id="productos">
         <h2>Productos</h2>
         <div class="productos-container">
-            <!-- Aquí puedes editar hasta 10 productos -->
             <div class="producto">Huevos</div>
-            <div class="producto">caja especial</div>
+            <div class="producto">Caja Especial</div>
             <div class="producto">Producto 3</div>
             <div class="producto">Producto 4</div>
             <div class="producto">Producto 5</div>
@@ -41,27 +36,26 @@
             <div class="producto">Producto 10</div>
         </div>
     </section>
-    
+
     <section id="contacto">
         <h2>Contacto</h2>
         <p>Teléfono: <span id="telefono">[Editar número]</span></p>
         <p>Email: <span id="email">[Editar correo]</span></p>
         <p>Redes Sociales: <span id="redes">[Editar enlaces]</span></p>
     </section>
-    
+
     <section id="galeria">
         <h2>Galería</h2>
         <input type="file" id="subirImagen" accept="image/*">
-        <div class="galeria-container"></div>
+        <div class="galeria-container" id="galeria-container"></div>
     </section>
-    
+
     <section id="reaccion">
         <h2>¿Te gusta esta página?</h2>
-        <button id="like">Me gusta</button>
-        <button id="dislike">No me gusta</button>
+        <button id="like" aria-label="Me gusta">Me gusta</button>
+        <button id="dislike" aria-label="No me gusta">No me gusta</button>
     </section>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
-

@@ -143,9 +143,10 @@
                     <button onclick="mostrarGaleria('galeria-huevos')">Ver Fotos</button>
                     <button onclick="mostrarPrecio('precio-huevos')">Ver Precio</button>
                     <p id="precio-huevos" style="display: none;">$3.00</p>
-                    <input type="file" onchange="cargarImagenes('galeria-huevos', event)" multiple>
                     <div class="mini-galeria" id="galeria-huevos" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
+                        <!-- Aquí se mostrarán las imágenes cargadas (solo visible para ti) -->
+                        <img src="huevos1.jpg" alt="Imagen 1 de Huevos">
+                        <img src="huevos2.jpg" alt="Imagen 2 de Huevos">
                     </div>
                 </div>
 
@@ -155,9 +156,10 @@
                     <button onclick="mostrarGaleria('galeria-caja')">Ver Fotos</button>
                     <button onclick="mostrarPrecio('precio-caja')">Ver Precio</button>
                     <p id="precio-caja" style="display: none;">$10.00</p>
-                    <input type="file" onchange="cargarImagenes('galeria-caja', event)" multiple>
                     <div class="mini-galeria" id="galeria-caja" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
+                        <!-- Aquí se mostrarán las imágenes cargadas (solo visible para ti) -->
+                        <img src="caja1.jpg" alt="Imagen 1 de Caja Especial">
+                        <img src="caja2.jpg" alt="Imagen 2 de Caja Especial">
                     </div>
                 </div>
 
@@ -167,83 +169,14 @@
                     <button onclick="mostrarGaleria('galeria-p3')">Ver Fotos</button>
                     <button onclick="mostrarPrecio('precio-p3')">Ver Precio</button>
                     <p id="precio-p3" style="display: none;">$5.00</p>
-                    <input type="file" onchange="cargarImagenes('galeria-p3', event)" multiple>
                     <div class="mini-galeria" id="galeria-p3" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
+                        <!-- Aquí se mostrarán las imágenes cargadas (solo visible para ti) -->
+                        <img src="Verdura.JPG" alt="Imagen 1 de Producto 3">
+                        <img src=Pollo.JPG" alt="Imagen 2 de Producto 3">
                     </div>
                 </div>
 
-                <!-- Producto 4 -->
-                <div class="producto">
-                    <h3>Producto 4</h3>
-                    <button onclick="mostrarGaleria('galeria-p4')">Ver Fotos</button>
-                    <button onclick="mostrarPrecio('precio-p4')">Ver Precio</button>
-                    <p id="precio-p4" style="display: none;">$8.00</p>
-                    <input type="file" onchange="cargarImagenes('galeria-p4', event)" multiple>
-                    <div class="mini-galeria" id="galeria-p4" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
-                    </div>
-                </div>
-
-                <!-- Producto 5 -->
-                <div class="producto">
-                    <h3>Producto 5</h3>
-                    <button onclick="mostrarGaleria('galeria-p5')">Ver Fotos</button>
-                    <button onclick="mostrarPrecio('precio-p5')">Ver Precio</button>
-                    <p id="precio-p5" style="display: none;">$6.50</p>
-                    <input type="file" onchange="cargarImagenes('galeria-p5', event)" multiple>
-                    <div class="mini-galeria" id="galeria-p5" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
-                    </div>
-                </div>
-
-                <!-- Producto 6 -->
-                <div class="producto">
-                    <h3>Producto 6</h3>
-                    <button onclick="mostrarGaleria('galeria-p6')">Ver Fotos</button>
-                    <button onclick="mostrarPrecio('precio-p6')">Ver Precio</button>
-                    <p id="precio-p6" style="display: none;">$4.75</p>
-                    <input type="file" onchange="cargarImagenes('galeria-p6', event)" multiple>
-                    <div class="mini-galeria" id="galeria-p6" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
-                    </div>
-                </div>
-
-                <!-- Producto 7 -->
-                <div class="producto">
-                    <h3>Producto 7</h3>
-                    <button onclick="mostrarGaleria('galeria-p7')">Ver Fotos</button>
-                    <button onclick="mostrarPrecio('precio-p7')">Ver Precio</button>
-                    <p id="precio-p7" style="display: none;">$7.00</p>
-                    <input type="file" onchange="cargarImagenes('galeria-p7', event)" multiple>
-                    <div class="mini-galeria" id="galeria-p7" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
-                    </div>
-                </div>
-
-                <!-- Producto 8 -->
-                <div class="producto">
-                    <h3>Producto 8</h3>
-                    <button onclick="mostrarGaleria('galeria-p8')">Ver Fotos</button>
-                    <button onclick="mostrarPrecio('precio-p8')">Ver Precio</button>
-                    <p id="precio-p8" style="display: none;">$9.00</p>
-                    <input type="file" onchange="cargarImagenes('galeria-p8', event)" multiple>
-                    <div class="mini-galeria" id="galeria-p8" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
-                    </div>
-                </div>
-
-                <!-- Producto 9 -->
-                <div class="producto">
-                    <h3>Producto 9</h3>
-                    <button onclick="mostrarGaleria('galeria-p9')">Ver Fotos</button>
-                    <button onclick="mostrarPrecio('precio-p9')">Ver Precio</button>
-                    <p id="precio-p9" style="display: none;">$5.00</p>
-                    <input type="file" onchange="cargarImagenes('galeria-p9', event)" multiple>
-                    <div class="mini-galeria" id="galeria-p9" style="display: none;">
-                        <!-- Aquí se mostrarán las imágenes cargadas -->
-                    </div>
-                </div>
+                <!-- Agrega los demás productos de manera similar -->
 
             </div>
         </section>
@@ -270,13 +203,6 @@
             const precio = document.getElementById(id);
             precio.style.display = precio.style.display === "none" ? "block" : "none";
         }
-
-        function cargarImagenes(id, event) {
-            const galeria = document.getElementById(id);
-            galeria.innerHTML = ''; // Limpiar las imágenes previas
-            const archivos = event.target.files;
-
-            for (let i = 0; i < archivos.length; i++) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const
+    </script>
+</body>
+</html>

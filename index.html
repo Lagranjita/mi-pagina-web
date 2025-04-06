@@ -97,6 +97,25 @@
         #lightbox:active {
             display: none;
         }
+
+        .mini-galeria {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .mini-galeria img {
+            width: 100px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .mini-galeria img:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -118,16 +137,35 @@
         <section id="productos">
             <h2>Productos</h2>
             <div class="productos-container">
-                <div class="producto">Huevos</div>
-                <div class="producto">Caja Especial</div>
-                <div class="producto">Producto 3</div>
-                <div class="producto">Producto 4</div>
-                <div class="producto">Producto 5</div>
-                <div class="producto">Producto 6</div>
-                <div class="producto">Producto 7</div>
-                <div class="producto">Producto 8</div>
-                <div class="producto">Producto 9</div>
-                <div class="producto">Producto 10</div>
+
+                <div class="producto">
+                    <h3>Huevos</h3>
+                    <button onclick="mostrarGaleria('galeria-huevos')">Ver Fotos</button>
+                    <div class="mini-galeria" id="galeria-huevos" style="display: none;">
+                        <img src="huevos1.jpg" alt="Huevos 1">
+                        <img src="huevos2.jpg" alt="Huevos 2">
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <h3>Caja Especial</h3>
+                    <button onclick="mostrarGaleria('galeria-caja')">Ver Fotos</button>
+                    <div class="mini-galeria" id="galeria-caja" style="display: none;">
+                        <img src="caja1.jpg" alt="Caja Especial 1">
+                        <img src="caja2.jpg" alt="Caja Especial 2">
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <h3>Producto 3</h3>
+                    <button onclick="mostrarGaleria('galeria-p3')">Ver Fotos</button>
+                    <div class="mini-galeria" id="galeria-p3" style="display: none;">
+                        <img src="p3_1.jpg" alt="Producto 3 - 1">
+                        <img src="p3_2.jpg" alt="Producto 3 - 2">
+                    </div>
+                </div>
+
+                <!-- Agrega más productos siguiendo el mismo patrón -->
             </div>
         </section>
 
@@ -141,9 +179,9 @@
         <section id="galeria">
             <h2>Galería</h2>
             <div class="galeria-container" id="galeria-container">
-                <img src="Pollos.JPG" alt="Imagen 1">
-                <img src="Verdura.JPG" alt="Imagen 2">
-                <img src="Canasta.JPG" alt="Imagen 3">
+                <img src="imagen1.jpg" alt="Imagen 1">
+                <img src="imagen2.jpg" alt="Imagen 2">
+                <img src="imagen3.jpg" alt="Imagen 3">
                 <img src="imagen4.jpg" alt="Imagen 4">
                 <img src="imagen5.jpg" alt="Imagen 5">
                 <img src="imagen6.jpg" alt="Imagen 6">
@@ -185,6 +223,11 @@
         lightbox.addEventListener('click', () => {
             lightbox.style.display = 'none';
         });
+
+        function mostrarGaleria(id) {
+            const galeria = document.getElementById(id);
+            galeria.style.display = galeria.style.display === "none" ? "flex" : "none";
+        }
     </script>
 </body>
 </html>

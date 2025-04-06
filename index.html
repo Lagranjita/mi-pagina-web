@@ -2,21 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Granjita</title>
     <style>
-        /* Centramos todos los textos */
         body, h1, h2, p, ul, li, .producto {
             text-align: center;
         }
 
-        /* Quitamos estilos predeterminados de listas */
         ul {
             list-style: none;
             padding: 0;
         }
 
-        /* Centramos la imagen del banner */
         .banner img {
             display: block;
             margin: 0 auto;
@@ -24,7 +21,6 @@
             height: auto;
         }
 
-        /* Contenedor de productos centrado */
         .productos-container {
             display: flex;
             flex-wrap: wrap;
@@ -41,7 +37,6 @@
             border-radius: 8px;
         }
 
-        /* Galería centrada */
         .galeria-container {
             display: flex;
             flex-wrap: wrap;
@@ -50,7 +45,17 @@
             margin-top: 1rem;
         }
 
-        /* Botones de reacción centrados */
+        .galeria-container img {
+            width: 200px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .galeria-container img:hover {
+            transform: scale(1.05);
+        }
+
         #reaccion {
             text-align: center;
             margin-top: 2rem;
@@ -62,12 +67,35 @@
             cursor: pointer;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             margin-top: 2rem;
             padding: 1rem;
             background-color: #f0f0f0;
+        }
+
+        /* LIGHTBOX STYLES */
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        #lightbox:active {
+            display: none;
         }
     </style>
 </head>
@@ -112,9 +140,11 @@
 
         <section id="galeria">
             <h2>Galería</h2>
-            <label for="subirImagen">Sube una imagen:</label><br>
-            <input type="file" id="subirImagen" accept="image/*">
-            <div class="galeria-container" id="galeria-container"></div>
+            <div class="galeria-container" id="galeria-container">
+                <img src="imagen1.jpg" alt="Producto o escena 1">
+                <img src="imagen2.jpg" alt="Producto o escena 2">
+                <!-- Agrega más imágenes si deseas -->
+            </div>
         </section>
 
         <section id="reaccion">
@@ -128,6 +158,27 @@
         <p>&copy; 2025 La Granjita. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Contenedor del Lightbox -->
+    <div id="lightbox">
+        <img src="" alt="Vista ampliada">
+    </div>
+
+    <script>
+        // Script para el efecto lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+
+        document.querySelectorAll('.galeria-container img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
 </body>
 </html>

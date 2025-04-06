@@ -3,59 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Negocio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>La Granjita</title>
+    <style>
+        /* Centramos todos los textos */
+        body, h1, h2, p, ul, li, .producto {
+            text-align: center;
+        }
+
+        /* Quitamos estilos predeterminados de listas */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Centramos la imagen del banner */
+        .banner img {
+            display: block;
+            margin: 0 auto;
+            max-width: 75%;
+            height: auto;
+        }
+
+        /* Contenedor de productos centrado */
+        .productos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .producto {
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 150px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        /* Galería centrada */
+        .galeria-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Botones de reacción centrados */
+        #reaccion {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .reaction-btn {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="banner">
             <h1>LA GRANJITA</h1>
-            <img src="NB.JPEG" alt="Banner" style="max-width: 75%; height: auto;">
-
+            <img src="NB.JPEG" alt="Banner de La Granjita">
         </div>
         <nav>
             <ul>
-                <li><a href="#productos" class="reaction-btn">Productos</a></li> <!-- Botón de Productos -->
+                <li><a href="#productos" class="reaction-btn">Productos</a></li>
                 <li><a href="#contacto" class="reaction-btn">Contacto</a></li>
                 <li><a href="#galeria" class="reaction-btn">Galería</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="productos">
-        <h2>Productos</h2>
-        <div class="productos-container">
-            <div class="producto">Huevos</div>
-            <div class="producto">Caja Especial</div>
-            <div class="producto">Producto 3</div>
-            <div class="producto">Producto 4</div>
-            <div class="producto">Producto 5</div>
-            <div class="producto">Producto 6</div>
-            <div class="producto">Producto 7</div>
-            <div class="producto">Producto 8</div>
-            <div class="producto">Producto 9</div>
-            <div class="producto">Producto 10</div>
-        </div>
-    </section>
+    <main>
+        <section id="productos">
+            <h2>Productos</h2>
+            <div class="productos-container">
+                <div class="producto">Huevos</div>
+                <div class="producto">Caja Especial</div>
+                <div class="producto">Producto 3</div>
+                <div class="producto">Producto 4</div>
+                <div class="producto">Producto 5</div>
+                <div class="producto">Producto 6</div>
+                <div class="producto">Producto 7</div>
+                <div class="producto">Producto 8</div>
+                <div class="producto">Producto 9</div>
+                <div class="producto">Producto 10</div>
+            </div>
+        </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Teléfono: <span id="telefono">[Editar número]</span></p>
-        <p>Email: <span id="email">[Editar correo]</span></p>
-        <p>Redes Sociales: <span id="redes">[Editar enlaces]</span></p>
-    </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Teléfono: <span id="telefono">[Editar número]</span></p>
+            <p>Email: <span id="email">[Editar correo]</span></p>
+            <p>Redes Sociales: <span id="redes">[Editar enlaces]</span></p>
+        </section>
 
-    <section id="galeria">
-        <h2>Galería</h2>
-        <input type="file" id="subirImagen" accept="image/*">
-        <div class="galeria-container" id="galeria-container"></div>
-    </section>
+        <section id="galeria">
+            <h2>Galería</h2>
+            <label for="subirImagen">Sube una imagen:</label><br>
+            <input type="file" id="subirImagen" accept="image/*">
+            <div class="galeria-container" id="galeria-container"></div>
+        </section>
 
-    <section id="reaccion">
-        <h2>¿Te gusta esta página?</h2>
-        <button id="like" class="reaction-btn" aria-label="Me gusta">Me gusta</button>
-        <button id="dislike" class="reaction-btn" aria-label="No me gusta">No me gusta</button>
-    </section>
+        <section id="reaccion">
+            <h2>¿Te gusta esta página?</h2>
+            <button id="like" class="reaction-btn" aria-label="Me gusta">Me gusta</button>
+            <button id="dislike" class="reaction-btn" aria-label="No me gusta">No me gusta</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 La Granjita. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

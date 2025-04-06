@@ -112,32 +112,126 @@
     <section id="productos">
         <h2>Productos</h2>
         <div class="productos-container">
-            <!-- Productos del 1 al 10 -->
-            <!-- Puedes duplicar y cambiar nombres/precios/imágenes según tus necesidades -->
-            ${Array.from({length: 10}, (_, i) => {
-                const index = i + 1;
-                return `
-                <div class="producto">
-                    <h3>Producto ${index}</h3>
-                    <button onclick="mostrarGaleria('galeria-${index}')">Ver Fotos</button>
-                    <button onclick="mostrarPrecio('precio-${index}')">Ver Precio</button>
-                    <p id="precio-${index}" style="display: none;">$${(3 + i).toFixed(2)}</p>
-                    <div class="mini-galeria" id="galeria-${index}" style="display: none;">
-                        <img src="imagen${index}-1.jpg" alt="Imagen 1 de Producto ${index}">
-                        <img src="imagen${index}-2.jpg" alt="Imagen 2 de Producto ${index}">
-                    </div>
-                </div>`;
-            }).join('')}
+            <!-- 10 productos -->
+            <!-- Puedes cambiar imágenes y precios según necesidad -->
+            <div class="producto">
+                <h3>Producto 1</h3>
+                <button onclick="mostrarGaleria('galeria-1')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-1')">Ver Precio</button>
+                <p id="precio-1" style="display: none;">$3.00</p>
+                <div class="mini-galeria" id="galeria-1" style="display: none;">
+                    <img src="img1a.jpg" alt="Producto 1 Imagen 1">
+                    <img src="img1b.jpg" alt="Producto 1 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 2</h3>
+                <button onclick="mostrarGaleria('galeria-2')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-2')">Ver Precio</button>
+                <p id="precio-2" style="display: none;">$4.00</p>
+                <div class="mini-galeria" id="galeria-2" style="display: none;">
+                    <img src="img2a.jpg" alt="Producto 2 Imagen 1">
+                    <img src="img2b.jpg" alt="Producto 2 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 3</h3>
+                <button onclick="mostrarGaleria('galeria-3')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-3')">Ver Precio</button>
+                <p id="precio-3" style="display: none;">$5.00</p>
+                <div class="mini-galeria" id="galeria-3" style="display: none;">
+                    <img src="img3a.jpg" alt="Producto 3 Imagen 1">
+                    <img src="img3b.jpg" alt="Producto 3 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 4</h3>
+                <button onclick="mostrarGaleria('galeria-4')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-4')">Ver Precio</button>
+                <p id="precio-4" style="display: none;">$6.00</p>
+                <div class="mini-galeria" id="galeria-4" style="display: none;">
+                    <img src="img4a.jpg" alt="Producto 4 Imagen 1">
+                    <img src="img4b.jpg" alt="Producto 4 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 5</h3>
+                <button onclick="mostrarGaleria('galeria-5')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-5')">Ver Precio</button>
+                <p id="precio-5" style="display: none;">$7.00</p>
+                <div class="mini-galeria" id="galeria-5" style="display: none;">
+                    <img src="img5a.jpg" alt="Producto 5 Imagen 1">
+                    <img src="img5b.jpg" alt="Producto 5 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 6</h3>
+                <button onclick="mostrarGaleria('galeria-6')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-6')">Ver Precio</button>
+                <p id="precio-6" style="display: none;">$8.00</p>
+                <div class="mini-galeria" id="galeria-6" style="display: none;">
+                    <img src="img6a.jpg" alt="Producto 6 Imagen 1">
+                    <img src="img6b.jpg" alt="Producto 6 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 7</h3>
+                <button onclick="mostrarGaleria('galeria-7')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-7')">Ver Precio</button>
+                <p id="precio-7" style="display: none;">$9.00</p>
+                <div class="mini-galeria" id="galeria-7" style="display: none;">
+                    <img src="img7a.jpg" alt="Producto 7 Imagen 1">
+                    <img src="img7b.jpg" alt="Producto 7 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 8</h3>
+                <button onclick="mostrarGaleria('galeria-8')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-8')">Ver Precio</button>
+                <p id="precio-8" style="display: none;">$10.00</p>
+                <div class="mini-galeria" id="galeria-8" style="display: none;">
+                    <img src="img8a.jpg" alt="Producto 8 Imagen 1">
+                    <img src="img8b.jpg" alt="Producto 8 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 9</h3>
+                <button onclick="mostrarGaleria('galeria-9')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-9')">Ver Precio</button>
+                <p id="precio-9" style="display: none;">$11.00</p>
+                <div class="mini-galeria" id="galeria-9" style="display: none;">
+                    <img src="img9a.jpg" alt="Producto 9 Imagen 1">
+                    <img src="img9b.jpg" alt="Producto 9 Imagen 2">
+                </div>
+            </div>
+            <div class="producto">
+                <h3>Producto 10</h3>
+                <button onclick="mostrarGaleria('galeria-10')">Ver Fotos</button>
+                <button onclick="mostrarPrecio('precio-10')">Ver Precio</button>
+                <p id="precio-10" style="display: none;">$12.00</p>
+                <div class="mini-galeria" id="galeria-10" style="display: none;">
+                    <img src="img10a.jpg" alt="Producto 10 Imagen 1">
+                    <img src="img10b.jpg" alt="Producto 10 Imagen 2">
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="galeria">
         <h2>Galería</h2>
         <div class="galeria-container">
-            ${Array.from({length: 12}, (_, i) => {
-                const index = i + 1;
-                return `<img src="galeria${index}.jpg" alt="Imagen ${index} de galeria">`;
-            }).join('')}
+            <img src="gal1.jpg" alt="Galería 1">
+            <img src="gal2.jpg" alt="Galería 2">
+            <img src="gal3.jpg" alt="Galería 3">
+            <img src="gal4.jpg" alt="Galería 4">
+            <img src="gal5.jpg" alt="Galería 5">
+            <img src="gal6.jpg" alt="Galería 6">
+            <img src="gal7.jpg" alt="Galería 7">
+            <img src="gal8.jpg" alt="Galería 8">
+            <img src="gal9.jpg" alt="Galería 9">
+            <img src="gal10.jpg" alt="Galería 10">
+            <img src="gal11.jpg" alt="Galería 11">
+            <img src="gal12.jpg" alt="Galería 12">
         </div>
     </section>
 

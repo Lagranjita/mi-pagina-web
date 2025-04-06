@@ -37,22 +37,40 @@
             border-radius: 8px;
         }
 
-        .galeria-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
+        .producto h3 {
+            margin-bottom: 10px;
         }
 
-        .galeria-container img {
-            width: 200px;
-            border-radius: 8px;
+        .producto button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .producto button:hover {
+            background-color: #45a049;
+        }
+
+        .mini-galeria {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .mini-galeria img {
+            width: 100px;
+            border-radius: 5px;
             cursor: pointer;
             transition: transform 0.3s;
         }
 
-        .galeria-container img:hover {
+        .mini-galeria img:hover {
             transform: scale(1.05);
         }
 
@@ -97,25 +115,6 @@
         #lightbox:active {
             display: none;
         }
-
-        .mini-galeria {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .mini-galeria img {
-            width: 100px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .mini-galeria img:hover {
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body>
@@ -138,96 +137,105 @@
             <h2>Productos</h2>
             <div class="productos-container">
 
+                <!-- Producto 1 -->
                 <div class="producto">
                     <h3>Huevos</h3>
                     <button onclick="mostrarGaleria('galeria-huevos')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-huevos')">Ver Precio</button>
+                    <p id="precio-huevos" style="display: none;">$3.00</p>
                     <div class="mini-galeria" id="galeria-huevos" style="display: none;">
                         <img src="huevos1.jpg" alt="Huevos 1">
                         <img src="huevos2.jpg" alt="Huevos 2">
                     </div>
                 </div>
 
+                <!-- Producto 2 -->
                 <div class="producto">
                     <h3>Caja Especial</h3>
                     <button onclick="mostrarGaleria('galeria-caja')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-caja')">Ver Precio</button>
+                    <p id="precio-caja" style="display: none;">$10.00</p>
                     <div class="mini-galeria" id="galeria-caja" style="display: none;">
                         <img src="caja1.jpg" alt="Caja Especial 1">
                         <img src="caja2.jpg" alt="Caja Especial 2">
                     </div>
                 </div>
 
+                <!-- Producto 3 -->
                 <div class="producto">
                     <h3>Producto 3</h3>
                     <button onclick="mostrarGaleria('galeria-p3')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-p3')">Ver Precio</button>
+                    <p id="precio-p3" style="display: none;">$5.00</p>
                     <div class="mini-galeria" id="galeria-p3" style="display: none;">
                         <img src="p3_1.jpg" alt="Producto 3 - 1">
                         <img src="p3_2.jpg" alt="Producto 3 - 2">
                     </div>
                 </div>
 
-                <!-- Agrega más productos siguiendo el mismo patrón -->
-            </div>
-        </section>
+                <!-- Producto 4 -->
+                <div class="producto">
+                    <h3>Producto 4</h3>
+                    <button onclick="mostrarGaleria('galeria-p4')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-p4')">Ver Precio</button>
+                    <p id="precio-p4" style="display: none;">$8.00</p>
+                    <div class="mini-galeria" id="galeria-p4" style="display: none;">
+                        <img src="p4_1.jpg" alt="Producto 4 - 1">
+                        <img src="p4_2.jpg" alt="Producto 4 - 2">
+                    </div>
+                </div>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Teléfono: <span id="telefono">[Editar número]</span></p>
-            <p>Email: <span id="email">[Editar correo]</span></p>
-            <p>Redes Sociales: <span id="redes">[Editar enlaces]</span></p>
-        </section>
+                <!-- Producto 5 -->
+                <div class="producto">
+                    <h3>Producto 5</h3>
+                    <button onclick="mostrarGaleria('galeria-p5')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-p5')">Ver Precio</button>
+                    <p id="precio-p5" style="display: none;">$6.50</p>
+                    <div class="mini-galeria" id="galeria-p5" style="display: none;">
+                        <img src="p5_1.jpg" alt="Producto 5 - 1">
+                        <img src="p5_2.jpg" alt="Producto 5 - 2">
+                    </div>
+                </div>
 
-        <section id="galeria">
-            <h2>Galería</h2>
-            <div class="galeria-container" id="galeria-container">
-                <img src="imagen1.jpg" alt="Imagen 1">
-                <img src="imagen2.jpg" alt="Imagen 2">
-                <img src="imagen3.jpg" alt="Imagen 3">
-                <img src="imagen4.jpg" alt="Imagen 4">
-                <img src="imagen5.jpg" alt="Imagen 5">
-                <img src="imagen6.jpg" alt="Imagen 6">
-                <img src="imagen7.jpg" alt="Imagen 7">
-                <img src="imagen8.jpg" alt="Imagen 8">
-                <img src="imagen9.jpg" alt="Imagen 9">
-                <img src="imagen10.jpg" alt="Imagen 10">
-            </div>
-        </section>
+                <!-- Producto 6 -->
+                <div class="producto">
+                    <h3>Producto 6</h3>
+                    <button onclick="mostrarGaleria('galeria-p6')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-p6')">Ver Precio</button>
+                    <p id="precio-p6" style="display: none;">$4.75</p>
+                    <div class="mini-galeria" id="galeria-p6" style="display: none;">
+                        <img src="p6_1.jpg" alt="Producto 6 - 1">
+                        <img src="p6_2.jpg" alt="Producto 6 - 2">
+                    </div>
+                </div>
 
-        <section id="reaccion">
-            <h2>¿Te gusta esta página?</h2>
-            <button id="like" class="reaction-btn" aria-label="Me gusta">Me gusta</button>
-            <button id="dislike" class="reaction-btn" aria-label="No me gusta">No me gusta</button>
-        </section>
-    </main>
+                <!-- Producto 7 -->
+                <div class="producto">
+                    <h3>Producto 7</h3>
+                    <button onclick="mostrarGaleria('galeria-p7')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-p7')">Ver Precio</button>
+                    <p id="precio-p7" style="display: none;">$7.00</p>
+                    <div class="mini-galeria" id="galeria-p7" style="display: none;">
+                        <img src="p7_1.jpg" alt="Producto 7 - 1">
+                        <img src="p7_2.jpg" alt="Producto 7 - 2">
+                    </div>
+                </div>
 
-    <footer>
-        <p>&copy; 2025 La Granjita. Todos los derechos reservados.</p>
-    </footer>
+                <!-- Producto 8 -->
+                <div class="producto">
+                    <h3>Producto 8</h3>
+                    <button onclick="mostrarGaleria('galeria-p8')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-p8')">Ver Precio</button>
+                    <p id="precio-p8" style="display: none;">$9.00</p>
+                    <div class="mini-galeria" id="galeria-p8" style="display: none;">
+                        <img src="p8_1.jpg" alt="Producto 8 - 1">
+                        <img src="p8_2.jpg" alt="Producto 8 - 2">
+                    </div>
+                </div>
 
-    <!-- Lightbox -->
-    <div id="lightbox">
-        <img src="" alt="Vista ampliada">
-    </div>
-
-    <script>
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = lightbox.querySelector('img');
-
-        document.querySelectorAll('.galeria-container img').forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.style.display = 'flex';
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-            });
-        });
-
-        lightbox.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
-
-        function mostrarGaleria(id) {
-            const galeria = document.getElementById(id);
-            galeria.style.display = galeria.style.display === "none" ? "flex" : "none";
-        }
-    </script>
-</body>
-</html>
+                <!-- Producto 9 -->
+                <div class="producto">
+                    <h3>Producto 9</h3>
+                    <button onclick="mostrarGaleria('galeria-p9')">Ver Fotos</button>
+                    <button onclick="mostrarPrecio('precio-p9')">Ver Precio</button>
+                    <p id="precio-p9" style="display: none;">$5.
